@@ -123,11 +123,11 @@
         const text = await response.text();
         document.getElementById('response').textContent = text;
 
-        // ✅ Redirect after successful submission
+        // ✅ Redirect immmediately after submission
         if (text.toLowerCase().includes("success") || text.trim() !== "") {
           setTimeout(() => {
             window.location.href = "https://mpesafoundationacademy.ac.ke";
-          }, 1000); // 1 second delay for user feedback
+          }, 1000); // no delay for user feedback
         }
 
         form.reset();
